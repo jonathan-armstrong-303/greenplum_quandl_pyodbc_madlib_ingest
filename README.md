@@ -111,10 +111,13 @@ You should receive output
 
 **RUN ON GREENPLUM MDW SERVER ("GUEST" IN VAGRANT)**
 
-**RUN AS GPADMIN USER(i.e., "sudo su gpadmin" and execute subsequent commands)**
+**RUN AS GPADMIN USER (i.e., "sudo su gpadmin" and execute subsequent commands)**
 
 Add/modify the following variables to .bashrc variables for the gpadmin user:
 
+    sudo su gpadmin
+    vi ~/.bashrc
+    
     export PGPORT=5432
     export PGUSER=gpadmin
     export PGPASSWORD=gpadmin
