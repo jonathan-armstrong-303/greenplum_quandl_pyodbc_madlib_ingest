@@ -90,11 +90,13 @@ Again, this is congruent on my previous Vagrant Greenplum install. YMMV may vary
     
 Modify the following parameters in the $ODBCINI file as follows:
 
-    LogonID=**gpadmin**
-    Password=**gpadmin**
-    Database=**development**
-    HostName=**192.168.0.200**
-    PortNumber=**5432**
+    <pre>
+    LogonID=<b>gpadmin</b>
+    Password=<b>gpadmin</b>
+    Database=<b>development</b>
+    HostName=<b>192.168.0.200</b>
+    PortNumber=<b>5432</b>
+    <\pre>
 
 Validate that the changes were successfully affected:
 
@@ -152,12 +154,14 @@ the Progress documentation so I'm including them here for posterity.
 
 Enter the bolded text when prompted:
 
-    Enter the data source name : **Greenplum Wire Protocol**
-    Enter the user name        : **gpadmin**
-    Enter the password         : **gpadmin**
+    <pre>
+    Enter the data source name : <b>Greenplum Wire Protocol<\b>
+    Enter the user name        : <b>gpadmin<\b>
+    Enter the password         : <b>gpadmin<\b>
 
     Enter SQL statements (Press ENTER to QUIT)
-    SQL> **select version();**
+    SQL> <b>select version();<\b>
+    <\pre>
 
 You should received output like the following:
 *version    
