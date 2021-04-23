@@ -71,7 +71,7 @@ Run installation script for Progress ODBC connection -- usual "Y" / "YES" answer
 
 Mindlessly enter the usual Y/YES/etc registration/installation information when prompted 
 (not included for brevity)
-Enter the following for ++both++ key & serial number:
+Enter the following for *both* key & serial number:
 (please refer to https://gpdb.docs.pivotal.io/6-15/datadirect/datadirect_ODBC_71.html for potential updates)
 
     1076681984
@@ -89,7 +89,6 @@ Again, this is congruent on my previous Vagrant Greenplum install. YMMV may vary
     vi $ODBCINI
     
 Modify the following parameters in the $ODBCINI file as follows:
-
     
     LogonID=gpadmin
     Password=gpadmin
@@ -270,7 +269,6 @@ You should get output nearly identical to the following:
 */usr/local/greenplum-db-6.14.0/bin/psql
 /usr/local/greenplum-db-6.14.0/bin/postgres
 /usr/local/greenplum-db-6.14.0/bin/pg_config*
-
 
 Ensure database started and running
 
