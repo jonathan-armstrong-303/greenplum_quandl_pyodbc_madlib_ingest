@@ -7,7 +7,7 @@ This project is a tutorial detailing ingestion of financial data (Quandl.com pro
 
 There is often a dearth of "soup to nuts" tutorials and beginners are often left to the frustrating effort of (in this case) trying to piece together disparate pieces of a puzzle including database setup, ODBC configuration, Python code, and ancillary packages and installations.  
 
-The purpose is to tie together an entire flow from ingesting a data source (from Quandl.com) into a Pandas dataframe, doing a couple of rudimentary manipulations on it, inserting it into the database, and showing how it can be subsequently manipulated with the Apache MADlib machine learning library.  I've included a lot of low-level detail on each step that will hopefully save someone quite a bit of time; the only downside is that a good chunk of the prerequisite installation steps aren't totally amenable to automation thanks to things like Pivotal requiring registration for a lot of the downloads.  
+The purpose is to tie together an entire flow from ingesting a data source (from Quandl.com) into a Pandas dataframe, doing a couple of rudimentary manipulations on it, inserting it into the database, and showing how it can be subsequently manipulated with the Apache MADlib machine learning library.  I've included a lot of low-level detail on each step that will hopefully save someone quite a bit of time; the only downside is that a good chunk of the prerequisite installation steps aren't totally amenable to automation thanks to things like Pivotal requiring registration the requisite binaries.  
 
 ## Prerequisites (Hardware)
 
