@@ -33,7 +33,7 @@ There are two main sections to the installation section: installing the pyodbc p
 
 Before proceeding, ensure that instructions are issued on the appropriate server (i.e., host or guest [i.e., Greenplum master node]).  
 
-++**RUN ON HOST (i.e. local server)**++
+**RUN ON HOST (i.e. local server)**
 
 **INSTALLING THE DRIVER AND MODIFYING THE DSN**
 
@@ -109,9 +109,9 @@ You should receive output
 *Load of ddgplm27.so successful, qehandle is 0x2105F00*
 *File version: 07.16.0389 (B0562, U0408)*
 
-++**RUN ON GREENPLUM MDW SERVER ("GUEST" IN VAGRANT)**++
+**RUN ON GREENPLUM MDW SERVER ("GUEST" IN VAGRANT)**
 
-++**RUN AS GPADMIN USER(i.e., "sudo su gpadmin" and execute subsequent commands)**++
+**RUN AS GPADMIN USER(i.e., "sudo su gpadmin" and execute subsequent commands)**
 
 Add/modify the following variables to .bashrc variables for the gpadmin user:
 
@@ -134,7 +134,7 @@ Source in new variables and restart Greenplum:
     . ~/.bashrc
     gpstop -ra
 
-++**RUN ON HOST (I.E. LOCAL SERVER)**++
+**RUN ON HOST (I.E. LOCAL SERVER)**
 
 If desired, test accessibility via database IDE if desired. (DBeaver with JDBC driver was used for this test).
 The following parameters work with antecedent Vagrant cluster install:
@@ -237,17 +237,16 @@ Download the MADLib binary under "Greenplum Advanced Analytics" (requires regist
 "MADlib 1.18.0+1 for RHEL 7" and copy the file to the gpadmin home directory
 on Greenplum master node:
 
-++**ON HOST**++
+**ON HOST**
 
     cp ~/Downloads/madlib-1.18.0+1-gp6-rhel7-x86_64.tar.gz .
     scp madlib-1.18.0+1-gp6-rhel7-x86_64.tar.gz gpadmin@mdw:/home/gpadmin
-
 
 ssh into master node on Vagrant cluster, extract & install MADLib library
 
     vagrant ssh mdw
 
-++**ON GREENPLUM MASTER NODE (GUEST) **++
+**ON GREENPLUM MASTER NODE (GUEST) **
 
     sudo su gpadmin
     cd ~
