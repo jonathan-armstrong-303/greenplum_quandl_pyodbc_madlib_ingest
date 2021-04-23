@@ -175,20 +175,13 @@ PostgreSQL 9.4.24 (Greenplum Database 6.14.0 build commit:62d24f4a455276cab4bf2c
 
 Check the installation of ODBC.  You should now see output like the following:
 
-*unixODBC 2.3.4*
-
-*DRIVERS............: /etc/odbcinst.ini*
-
-*SYSTEM DATA SOURCES: /etc/odbc.ini*
-
+*unixODBC 2.3.4* 
+*DRIVERS............: /etc/odbcinst.ini* 
+*SYSTEM DATA SOURCES: /etc/odbc.ini* 
 *FILE DATA SOURCES..: /etc/ODBCDataSources*
-
 *USER DATA SOURCES..: /opt/Progress/DataDirect/Connect64_for_ODBC_71/odbc.ini*
-
 *SQLULEN Size.......: 8*
-
 *SQLLEN Size........: 8*
-
 *SQLSETPOSIROW Size.: 8*
 
     odbcinst -j
