@@ -192,9 +192,9 @@ Validate the ODBC information again [we will use this for the pyodbc setup]
 
 You should receive the following output:
 
-*[ODBC]
+*[ODBC]*
 
-[Greenplum Wire Protocol]*
+*[Greenplum Wire Protocol]*
 
 If there are issues (and hopefully this work instruction has saved someone the headache of having to troubleshoot these) I have enclosed the output of all of my odbc-related configs at the end of this document.)
 
