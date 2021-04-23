@@ -90,14 +90,13 @@ Again, this is congruent on my previous Vagrant Greenplum install. YMMV may vary
     
 Modify the following parameters in the $ODBCINI file as follows:
 
-    <pre>
-    LogonID=<b>gpadmin</b>
-    Password=<b>gpadmin</b>
-    Database=<b>development</b>
-    HostName=<b>192.168.0.200</b>
-    PortNumber=<b>5432</b>
-    </pre>
-
+    
+    LogonID=gpadmin
+    Password=gpadmin
+    Database=development
+    HostName=192.168.0.200
+    PortNumber=5432
+    
 Validate that the changes were successfully affected:
 
     egrep -i "database|hostname|portnumber|logonid|password" $ODBCINI|egrep -vi "keypassword|keystorepassword" 
@@ -154,15 +153,13 @@ the Progress documentation so I'm including them here for posterity.
 
 Enter the bolded text when prompted:
 
-    <pre>
-    Enter the data source name : <b>Greenplum Wire Protocol<\b>
-    Enter the user name        : <b>gpadmin<\b>
-    Enter the password         : <b>gpadmin<\b>
+    Enter the data source name : Greenplum Wire Protocol
+    Enter the user name        : gpadmin
+    Enter the password         : gpadmin
 
     Enter SQL statements (Press ENTER to QUIT)
-    SQL> <b>select version();<\b>
-    </pre>
-
+    SQL> select version();
+    
 You should received output like the following:
 *version    
 PostgreSQL 9.4.24 (Greenplum Database 6.14.0 build commit:62d24f4a455276cab4bf2ca4538e96dcf58db8ba Open Source) on x86_64-unknown-linux-gnu, compiled by gcc (GCC) 6.4.0, 64-bit compiled on Feb  5 2021 18:58:52*
