@@ -96,7 +96,7 @@ Modify the following parameters in the $ODBCINI file as follows:
     Database=<b>development</b>
     HostName=<b>192.168.0.200</b>
     PortNumber=<b>5432</b>
-    <\pre>
+    </pre>
 
 Validate that the changes were successfully affected:
 
@@ -161,7 +161,7 @@ Enter the bolded text when prompted:
 
     Enter SQL statements (Press ENTER to QUIT)
     SQL> <b>select version();<\b>
-    <\pre>
+    </pre>
 
 You should received output like the following:
 *version    
