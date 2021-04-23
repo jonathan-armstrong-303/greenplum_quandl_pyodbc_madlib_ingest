@@ -247,7 +247,8 @@ ssh into master node on Vagrant cluster, extract & install MADLib library
 
     vagrant ssh mdw
 
-**ON GREENPLUM MASTER NODE (GUEST) **
+
+**ON GREENPLUM MASTER NODE (GUEST)**
 
     sudo su gpadmin
     cd ~
