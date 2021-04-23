@@ -103,8 +103,7 @@ Exit the file and validate the changes successfully made:
 
     egrep -i "database|hostname|portnumber|logonid|password" $ODBCINI|egrep -vi "keypassword|keystorepassword" 
 
-Verify the driver version. 
-You should receive output 
+Verify the driver version. You should receive output 
 *Load of ddgplm27.so successful, qehandle is 0x2105F00*
 *File version: 07.16.0389 (B0562, U0408)*
 
@@ -146,6 +145,7 @@ Source in new variables and restart Greenplum to effect changes:
 
 If desired, test accessibility via database IDE if desired. (DBeaver with JDBC driver was used for this test).
 The following parameters work with antecedent Vagrant cluster install:
+
 Host: **192.168.0.200**
 Database: **development**
 Username: **gpadmin**
@@ -191,7 +191,9 @@ Validate the ODBC information again [we will use this for the pyodbc setup]
     odbcinst -q -s
 
 You should receive the following output:
+
 *[ODBC]
+
 [Greenplum Wire Protocol]*
 
 If there are issues (and hopefully this work instruction has saved someone the headache of having to troubleshoot these) I have enclosed the output of all of my odbc-related configs at the end of this document.)
