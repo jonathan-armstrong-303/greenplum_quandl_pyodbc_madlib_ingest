@@ -1,9 +1,21 @@
 # Quandl data ingestion into Greenplum database with pyodbc and subsequent analysis with Apache MADlib ML library
 ## Synopsis
 
-This project is a tutorial detailing ingestion of financial data (Quandl.com provides an exceptionally nice API with many datasets) into a Greenplum database with pyodbc that can be subsequently analyzed/manipulated with the Apache MADlib ML library.
+This project is a tutorial detailing ingestion of financial data (using Quandl.com, which provides an exceptionally nice API with many free datasets) into a Greenplum database with pyodbc that can be subsequently analyzed/manipulated with the Apache MADlib ML library.
+
+After setting up this project, the user will have a working knowledge of the following:
+
+1. Ingesting data into a Pandas dataframe from a Web API;
+2. Performing basic transformations on Pandas data;
+3. Establishing database connectivity via ODBC drivers in Python;
+4. Insertion of data into a target database;
+5. Installation of Apache MADlib machine learning package and basic manipulation of extracted/transformed/loaded Quandl data.
+
+For this example, we are using palladium and platinum prices.
 
 ## Motivation
+
+The initial inspiration for this project came from the investor James Dines' "wolfpack theory", which states that commodities typically move in "complexes".  The author was interested to see what the relationship was between the transition metals complex (i.e., palladium and platinum.)
 
 There is often a dearth of "soup to nuts" tutorials and beginners are often left to the frustrating effort of (in this case) trying to piece together disparate pieces of a puzzle including database setup, ODBC configuration, Python code, and ancillary packages and installations.  
 
@@ -11,16 +23,11 @@ The purpose is to tie together an entire flow from ingesting a data source (from
 
 ## Prerequisites (Hardware)
 
-This project assumes that the user is running a Greenplum cluster per the author's previous installation (see https://github.com/jonathan-armstrong-303/vagrant_greenplum_6-1-4_install) in the Vagrant environment.  Greenplum's installation proved to be a bit... "opaque", but I was able to successfully create a nearly-100% automated build in the Vagrant environment, so the user shouldn't be intimidated by what would otherwise be the extremely esoteric installation process.
-
-This installation could undoubtedly be easily tweaked to just run on a local Postgres instance {MORE HERE}
+This project assumes that the user is running a Greenplum cluster per the author's previous installation (see https://github.com/jonathan-armstrong-303/vagrant_greenplum_6-1-4_install) in the Vagrant environment.  Greenplum's installation proved to be a bit... "opaque", but I was able to successfully create a nearly-100% automated build in the Vagrant environment, so the user shouldn't be intimidated by what would otherwise be the extremely esoteric installation process.  This installation could undoubtedly be easily extrapolated to just run on a local Postgres instance.
 
 This was performed on my home Linux desktop (4 cores/4.2 GHz processors/64 GB memory) and allocated 12GB RAM to each of the four Greenplum nodes in Vagrant (admittedly 4GB less than the minimum recommended) running Ubuntu 20.04.
 
-Configuration was tested with Vagrant 2.2.6.  (If Vagrant is not installed, I've provided up-to-date instructions on that below.)
 # Installation (Overview)
-
-Unfortunately, there are some annoyances (namely Pivotal requiring registration and consequent manual downloading of a lot of the necessary packages) that prevented this from easily being a completely automated installation script, but this isn't a huge show-stopper.
 
 Before proceeding, the user needs to register at both the VMWare Tanzu website (for Greenplum binaries) as well as Quandl (for access to the Quandl API which is used to ingest the palladium/platnium price dataset in the example).  
  
@@ -31,7 +38,7 @@ There are two main sections to the installation section: installing the pyodbc p
 
 ## Installation [pyodbc and Progress ODBC driver]
 
-Before proceeding, ensure that instructions are issued on the appropriate server (i.e., host or guest [i.e., Greenplum master node]).  
+Before proceeding, ensure that instructions are issued on the appropriate server (i.e., host (i.e., local machine) or guest [i.e., Greenplum master node]).  This is explicitly noted in **BOLDED ALL CAPS** throughout the installation instruction.
 
 **RUN ON HOST (i.e. local server)**
 
