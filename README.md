@@ -160,7 +160,7 @@ Enter the bolded text when prompted:
     Enter SQL statements (Press ENTER to QUIT)
     SQL> select version();
     
-You should received output like the following:
+You should receive output e.g., the following:
 *version    
 PostgreSQL 9.4.24 (Greenplum Database 6.14.0 build commit:62d24f4a455276cab4bf2ca4538e96dcf58db8ba Open Source) on x86_64-unknown-linux-gnu, compiled by gcc (GCC) 6.4.0, 64-bit compiled on Feb  5 2021 18:58:52*
 
@@ -181,6 +181,7 @@ Validate the ODBC information again [we will use this for the pyodbc setup]
 
     odbcinst -q -s
 
+You should receive the following output:
 *[ODBC]
 [Greenplum Wire Protocol]*
 
