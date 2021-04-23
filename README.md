@@ -161,7 +161,9 @@ the Progress documentation so I'm including them here for posterity.
 Enter the bolded text when prompted:
 
 Enter the data source name : **Greenplum Wire Protocol**
+
 Enter the user name        : **gpadmin**
+
 Enter the password         : **gpadmin**
 
 Enter SQL statements (Press ENTER to QUIT)
