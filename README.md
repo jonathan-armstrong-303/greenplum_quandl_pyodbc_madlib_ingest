@@ -150,14 +150,14 @@ the Progress documentation so I'm including them here for posterity.
     cd /opt/Progress/DataDirect/Connect64_for_ODBC_71/samples/example
     ./example
 
-Enter the bolded text when prompted:
+Enter the bolded text as prompted:
 
-    Enter the data source name : Greenplum Wire Protocol
-    Enter the user name        : gpadmin
-    Enter the password         : gpadmin
+Enter the data source name : **Greenplum Wire Protocol**
+Enter the user name        : **gpadmin**
+Enter the password         : **gpadmin**
 
-    Enter SQL statements (Press ENTER to QUIT)
-    SQL> select version();
+Enter SQL statements (Press ENTER to QUIT)
+    SQL> **select version();**
     
 You should receive output e.g., the following:
 *version    
